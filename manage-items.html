@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Items | Sheger Delights</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .manage-items {
+            padding: 30px 0;
+        }
+        .item-list {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .item-card {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .item-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .item-details {
+            flex-grow: 1;
+        }
+        .item-actions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .add-item-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        .form-row {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            flex: 1;
+            margin-right: 15px;
+        }
+        .form-group:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sheger Delights</h1>
+                <p>Admin Dashboard</p>
+            </div>
+            <div class="admin-actions">
+                <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="admin-nav">
+        <div class="container">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="manage-items.html" class="active"><i class="fas fa-utensils"></i> Manage Items</a></li>
+                <li><a href="manage-prices.html"><i class="fas fa-tags"></i> Manage Prices</a></li>
+                <li><a href="manage-addresses.html"><i class="fas fa-map-marker-alt"></i> Manage Addresses</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="manage-items">
+        <div class="container">
+            <h2>Manage Menu Items</h2>
+            
+            <div class="item-list">
+                <h3>Current Menu Items</h3>
+                
+                <div class="item-card">
+                    <img src="../../images/sambusa.jpg" alt="Lentil Sambusa" class="item-image">
+                    <div class="item-details">
+                        <h4>Lentil Sambusa</h4>
+                        <p>Spicy lentil filling in crispy pastry</p>
+                        <p><strong>Category:</strong> Sambusa</p>
+                        <p><strong>Price:</strong> 20 ETB</p>
+                        <p><strong>Status:</strong> <span class="available">Available</span></p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-small edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn-small delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                        <button class="btn-small status-btn"><i class="fas fa-toggle-on"></i> Toggle Status</button>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <img src="../../images/qoqr.jpg" alt="Plain Qoqr" class="item-image">
+                    <div class="item-details">
+                        <h4>Plain Qoqr</h4>
+                        <p>Traditional fried dough</p>
+                        <p><strong>Category:</strong> Qoqr</p>
+                        <p><strong>Price:</strong> 20 ETB</p>
+                        <p><strong>Status:</strong> <span class="available">Available</span></p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-small edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn-small delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                        <button class="btn-small status-btn"><i class="fas fa-toggle-on"></i> Toggle Status</button>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <img src="../../images/ertib.jpg" alt="Plain Ertib" class="item-image">
+                    <div class="item-details">
+                        <h4>Plain Ertib</h4>
+                        <p>Sweet fried bread</p>
+                        <p><strong>Category:</strong> Ertib</p>
+                        <p><strong>Price:</strong> 50 ETB</p>
+                        <p><strong>Status:</strong> <span class="available">Available</span></p>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn-small edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn-small delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                        <button class="btn-small status-btn"><i class="fas fa-toggle-on"></i> Toggle Status</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="add-item-form">
+                <h3>Add New Item</h3>
+                <form id="addItemForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="item-name">Item Name</label>
+                            <input type="text" id="item-name" name="item-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-category">Category</label>
+                            <select id="item-category" name="item-category" required>
+                                <option value="">Select Category</option>
+                                <option value="sambusa">Sambusa</option>
+                                <option value="qoqr">Qoqr</option>
+                                <option value="ertib">Ertib</option>
+                                <option value="combo">Combo</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="item-price">Price (ETB)</label>
+                            <input type="number" id="item-price" name="item-price" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-image">Image URL</label>
+                            <input type="text" id="item-image" name="item-image">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="item-description">Description</label>
+                        <textarea id="item-description" name="item-description" rows="3" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Add Item</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../js/admin.js"></script>
+</body>
+</html>

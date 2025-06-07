@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Addresses | Sheger Delights</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .manage-addresses {
+            padding: 30px 0;
+        }
+        .address-form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .delivery-areas {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .area-list {
+            list-style: none;
+            padding: 0;
+        }
+        .area-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .area-item:last-child {
+            border-bottom: none;
+        }
+        .area-actions a {
+            margin-left: 10px;
+            color: #555;
+        }
+        .area-actions a:hover {
+            color: #c00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sheger Delights</h1>
+                <p>Admin Dashboard</p>
+            </div>
+            <div class="admin-actions">
+                <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="admin-nav">
+        <div class="container">
+            <ul>
+                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="manage-items.html"><i class="fas fa-utensils"></i> Manage Items</a></li>
+                <li><a href="manage-prices.html"><i class="fas fa-tags"></i> Manage Prices</a></li>
+                <li><a href="manage-addresses.html" class="active"><i class="fas fa-map-marker-alt"></i> Manage Addresses</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="manage-addresses">
+        <div class="container">
+            <h2>Manage Business Address & Delivery Areas</h2>
+            
+            <div class="address-form">
+                <h3>Business Address</h3>
+                <form id="businessAddressForm">
+                    <div class="form-group">
+                        <label for="address-line1">Address Line 1</label>
+                        <input type="text" id="address-line1" name="address-line1" value="Alemgena/Kenteri" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address-line2">Address Line 2 (Optional)</label>
+                        <input type="text" id="address-line2" name="address-line2">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City/Town</label>
+                        <input type="text" id="city" name="city" value="Oromia Sheger" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" value="+251916843454" required>
+                    </div>
+                    <button type="submit" class="btn">Update Address</button>
+                </form>
+            </div>
+            
+            <div class="delivery-areas">
+                <h3>Delivery Areas</h3>
+                <form id="addAreaForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" id="new-area" name="new-area" placeholder="Enter new delivery area" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="delivery-fee" name="delivery-fee" placeholder="Delivery fee (ETB)" min="0" required>
+                    </div>
+                    <button type="submit" class="btn-small">Add Area</button>
+                </form>
+                
+                <ul class="area-list">
+                    <li class="area-item">
+                        <div class="area-name">Alemgena Town</div>
+                        <div class="area-fee">10 ETB</div>
+                        <div class="area-actions">
+                            <a href="#" class="edit-area"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="delete-area"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    <li class="area-item">
+                        <div class="area-name">Kenteri Town</div>
+                        <div class="area-fee">10 ETB</div>
+                        <div class="area-actions">
+                            <a href="#" class="edit-area"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="delete-area"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                    <li class="area-item">
+                        <div class="area-name">Sheger City</div>
+                        <div class="area-fee">25 ETB</div>
+                        <div class="area-actions">
+                            <a href="#" class="edit-area"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="delete-area"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../js/admin.js"></script>
+</body>
+</html>
