@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Program | Sheger Delights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sheger Delights</h1>
+                <p>Delicious Sambusa, Qoqr & Ertib</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li><a href="refer.html" class="active">Earn Money</a></li>
+                    <li><a href="tel:+251916843454"><i class="fas fa-phone"></i> +251 916 843454</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="referral-program">
+        <div class="container">
+            <h2>Earn Money With Our Referral Program</h2>
+            <div class="program-details">
+                <div class="how-it-works">
+                    <h3>How It Works</h3>
+                    <ol>
+                        <li>Share your unique referral link with friends</li>
+                        <li>When they place their first order using your link</li>
+                        <li>You earn 5% commission on their order</li>
+                        <li>Commission is paid via mobile money weekly</li>
+                    </ol>
+                </div>
+                
+                <div class="your-referral">
+                    <h3>Your Referral Information</h3>
+                    <div class="referral-stats">
+                        <div class="stat">
+                            <h4>Your Referrals</h4>
+                            <p id="referral-count">0</p>
+                        </div>
+                        <div class="stat">
+                            <h4>Earnings</h4>
+                            <p id="earnings">0 ETB</p>
+                        </div>
+                    </div>
+                    
+                    <div class="referral-link">
+                        <label>Your Unique Link:</label>
+                        <div class="link-box">
+                            <input type="text" id="referral-link" value="https://shegerdelights.com/order?ref=USER123" readonly>
+                            <button id="copy-link" class="btn-small">Copy</button>
+                        </div>
+                    </div>
+                    
+                    <div class="share-buttons">
+                        <p>Share via:</p>
+                        <button class="share-btn telegram"><i class="fab fa-telegram"></i> Telegram</button>
+                        <button class="share-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+                        <button class="share-btn facebook"><i class="fab fa-facebook"></i> Facebook</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="referral-terms">
+                <h3>Terms & Conditions</h3>
+                <ul>
+                    <li>Minimum order of 500 ETB to qualify for referral</li>
+                    <li>Commission is calculated before delivery fees</li>
+                    <li>Referral must be new customer's first order</li>
+                    <li>Commission paid every Friday via mobile money</li>
+                    <li>Minimum payout of 500 ETB required</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

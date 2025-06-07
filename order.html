@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Sheger Delights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sheger Delights</h1>
+                <p>Delicious Sambusa, Qoqr & Ertib</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html" class="active">Order Online</a></li>
+                    <li><a href="refer.html">Earn Money</a></li>
+                    <li><a href="tel:+251916843454"><i class="fas fa-phone"></i> +251 916 843454</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="order-form">
+        <div class="container">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                    <p class="help-text">Please include landmarks for easier delivery</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="delivery-time">Preferred Delivery Time</label>
+                    <select id="delivery-time" name="delivery-time">
+                        <option value="asap">As soon as possible</option>
+                        <option value="morning">Morning (8AM-10AM)</option>
+                        <option value="morning">Morning (10AM-12PM)</option>
+                        <option value="afternoon">Afternoon (12PM-2PM)</option>
+                        <option value="afternoon">Afternoon (2PM-4PM)</option>
+                        <option value="evening">Evening (4PM-12PM)</option>
+                        <option value="evening">Evening (12PM-8PM)</option>
+                    </select>
+                </div>
+                
+                <div class="order-items">
+                    <h3>Select Items</h3>
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Lentil Sambusa</h4>
+                            <p>20 ETB each</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="lentil-sambusa">-</button>
+                            <input type="number" id="lentil-sambusa" name="lentil-sambusa" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="lentil-sambusa">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Fry-Ready Sambusa</h4>
+                            <p>15 ETB each</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="Fry-Ready Sambusa">-</button>
+                            <input type="number" id="Fry-Ready Sambusa" name="Fry-Ready Sambusa" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="Fry-Ready Sambusa">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Vegetable Sambusa</h4>
+                            <p>20 ETB each</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="veg-sambusa">-</button>
+                            <input type="number" id="veg-sambusa" name="veg-sambusa" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="veg-sambusa">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Plain Qoqr</h4>
+                            <p>20 ETB each</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="plain-qoqr">-</button>
+                            <input type="number" id="plain-qoqr" name="plain-qoqr" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="plain-qoqr">+</button>
+                        </div>
+                    </div>
+                             
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Plain Ertib</h4>
+                            <p>50 ETB each</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="plain-ertib">-</button>
+                            <input type="number" id="plain-ertib" name="plain-ertib" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="plain-ertib">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Special Ertib</h4>
+                            <p>75 ETB each</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="Special Ertib">-</button>
+                            <input type="number" id="Special Ertib" name="Special Ertib" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="Special Ertib">+</button>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="item-option">
+                        <div class="item-info">
+                            <h4>Snack Combo</h4>
+                            <p>225 ETB</p>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" class="quantity-btn minus" data-item="snack-combo">-</button>
+                            <input type="number" id="snack-combo" name="snack-combo" value="0" min="0">
+                            <button type="button" class="quantity-btn plus" data-item="snack-combo">+</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Special Instructions</label>
+                    <textarea id="notes" name="notes" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="referral">Referral Code (if any)</label>
+                    <input type="text" id="referral" name="referral">
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-details">
+                        <p>Subtotal: <span id="subtotal">0</span> ETB</p>
+                        <p>Delivery Fee: <span id="delivery-fee">10</span> ETB</p>
+                        <p class="total">Total: <span id="total">10</span> ETB</p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
